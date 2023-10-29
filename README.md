@@ -10,8 +10,8 @@
    - `f2pool_api_key` the f2pool API key.
 3. Run `main.py`.
 
-4. The script checks if the `whitelist` and `error_log` files exist otherwise, it will create them.
+4. The script checks if the `whitelist` and `error_log` files exist, otherwise, it will create them.
 
 5. Insert the `CHAT_ID` of the users you want to allow to use the bot in `whitelist.txt`, one per line.
 
-Contact me for any question
+Contact me for any questions
