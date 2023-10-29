@@ -1,3 +1,4 @@
+import os
 import pytz
 import telegram.error
 
@@ -88,6 +89,16 @@ def main() -> None:
     application.run_polling()
 
 
+def check_files():
+    if not os.path.exists("whitelist.txt"):
+        with open("whitelist.txt", "w"):
+            pass
+    if not os.path.exists("error_log.txt"):
+        with open("error_log.txt", "w"):
+            pass
+
+
 if __name__ == "__main__":
+    check_files()
     load_whitelist_from_file()
     main()
