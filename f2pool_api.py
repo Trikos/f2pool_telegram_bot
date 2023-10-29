@@ -5,7 +5,7 @@ import datetime
 
 def get_all_mining_user_name():
     api_url = f"{variables.f2pool_endpoint}/mining_user/list"
-    headers = {"F2P-API-SECRET": variables.api_key_pause_unpause_list}
+    headers = {"F2P-API-SECRET": variables.f2pool_api_key}
     try:
         response = requests.post(api_url, headers=headers)
         response.raise_for_status()
@@ -25,7 +25,7 @@ def get_all_mining_user_name():
 def post_pause_unpause(action: str, data):
     try:
         api_url = f"{variables.f2pool_endpoint}/mining_user/payment/{action}"
-        headers = {"F2P-API-SECRET": variables.api_key_pause_unpause_list}
+        headers = {"F2P-API-SECRET": variables.f2pool_api_key}
         payload = {
             "mining_user_names": data,
             "currency": "bitcoin"
