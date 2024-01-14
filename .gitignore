@@ -8,6 +8,8 @@ __pycache__/
 
 # Custom files
 secret.py
+error_log.txt
+whitelist.txt
 
 # Distribution / packaging
 .Python

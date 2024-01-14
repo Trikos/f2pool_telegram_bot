@@ -2,7 +2,7 @@ import os
 import pytz
 import telegram.error
 
-import variables
+import secret
 import datetime
 
 from telegram import InlineKeyboardMarkup, Update
@@ -81,7 +81,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 def main() -> None:
     my_timezone = pytz.timezone('Europe/Rome')
-    application = Application.builder().token(variables.token).defaults(Defaults(tzinfo=my_timezone)).build()
+    application = Application.builder().token(secret.token).defaults(Defaults(tzinfo=my_timezone)).build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CallbackQueryHandler(button))
