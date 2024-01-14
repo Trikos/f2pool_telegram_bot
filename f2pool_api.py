@@ -37,7 +37,7 @@ def post_pause_unpause(action: str, data):
         return response
 
     except requests.exceptions.HTTPError as e:
-        error_message = f"Errore nella richiesta HTTP: {e} # {e.response}"
+        error_message = f"Error nella richiesta HTTP: {e} # {e.response}"
         with open("error_log.txt", "a") as log_file:
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             log_file.write(f"{timestamp} - {error_message}\n")
