@@ -12,8 +12,8 @@
 Example:
 
 ```
-token = "6897969739:AAG7Rfj__QoZZXmwZwTmjB_GJKIHf66IEwo"
-f2pool_api_key = "fh2gyr4n3l0g0upkocade90uc7154ndnifm32sxewm8pv9wojwhsamtqmeizla6t"
+token = "123456789:ABCDEFG1234567"
+f2pool_api_key = "yr4nmtqfs4wemeiz"
 ```
 3. Run `main.py`.
 
