@@ -73,7 +73,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if "Message is not modified" in str(e):
             await query.answer("Already on this page")
         else:
-            print(f"Errore BadRequest: {e}")
+            print(f"Error BadRequest: {e}")
             with open("error_log.txt", "a") as log_file:
                 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 log_file.write(f"{timestamp} - {e}\n")
